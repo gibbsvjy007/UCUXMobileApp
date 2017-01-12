@@ -1,0 +1,26 @@
+{
+    "name": "UcuxMobileApp",
+    "app_id": "",
+    "watch": {
+        "sass": [
+            "scss/**/*.scss"
+        ],
+        "html": [
+            "www/**/*.html"
+        ],
+        "livereload": [
+            "www/**/*.html",
+            "www/**/*.js",
+            "www/**/*.css"
+        ]
+    },
+    "gulpStartupTasks": [
+        "sass",
+        "watch"
+    ],
+    "watchPatterns": [
+        "www/**/*",
+        "!www/lib/**/*",
+        "!www/**/*.map"
+    ]
+}

@@ -1,0 +1,97 @@
+/* Empty. Add your own CSS if you like */
+
+@import 'variable.scss';
+html,
+body {
+    font-family: $font-lato !important;
+}
+
+.bg-ucux {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #fff;
+    //background: linear-gradient(rgba(20, 20, 20, .5), rgba(20, 20, 20, 6)), url(../../assets/images/bg.jpg) no-repeat bottom center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.transparent {
+    background: transparent;
+}
+
+.pane {
+    background: url(../../assets/images/bg.jpg) no-repeat bottom center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.header-logo {
+    height: 26px;
+    vertical-align: middle;
+    max-width: 100px;
+    margin-top: 3px;
+    max-height: 30px;
+}
+
+.center {
+    justify-content: center;
+}
+
+.bar.bar-stable {
+    &.bar-header {
+        background-color: transparent !important;
+        border: none;
+        background-image: none;
+    }
+    .title,
+    .button {
+        color: $white;
+        font-size: 1.5em;
+    }
+    margin-top: 8px;
+    .buttons-right {
+        right: 30px;
+    }
+}
+
+.popup-container {
+    .popup {
+        border-radius: 8px;
+        .popup-title {
+            font-size: 18px !important;
+        }
+        .button {
+            min-height: 32px;
+            height: 38px;
+        }
+    }
+}
+
+@-webkit-keyframes "pulse" {
+    0% {
+        -webkit-transform: scale(0);
+        opacity: 0.0;
+    }
+    25% {
+        -webkit-transform: scale(0);
+        opacity: 0.1;
+    }
+    50% {
+        -webkit-transform: scale(0.1);
+        opacity: 0.3;
+    }
+    75% {
+        -webkit-transform: scale(0.5);
+        opacity: 0.5;
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 0.0;
+    }
+}

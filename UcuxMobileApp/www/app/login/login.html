@@ -1,0 +1,33 @@
+<ion-view class="login" view-title="Login" align-title="center" hide-nav-bar="false" hide-back-button="true">
+    <ion-header-bar class="bar-stable bar bar-header" align-title="center">
+        <div class="title title-center header-item">Login</div>
+    </ion-header-bar>
+    <ion-content padding="true" scroll="false">
+        <form>
+            <div class="row responsive-md">
+                <div class="col col-50 col-offset-25">
+                    <div class="header padding text-center">
+                        <img src="assets/images/logo.png" alt="logo" />
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="list">
+                        <label class="item item-input">
+                            <i class="icon ion-person"></i>
+                            <input type="text" placeholder="Your Username" ng-model="login.username">
+                        </label>
+                        <label class="item item-input">
+                            <i class="icon ion-android-lock"></i>
+                            <input type="password" placeholder="Password" ng-model="login.password">
+                        </label>
+                        <button class="button button-block" ng-click="login.doLogin()">
+                            Login
+                        </button>
+                    </div>
+                    <div class="row row-no-padding center">
+                        <ion-checkbox ng-change="login.rememberMe(login.remember);" ng-model="login.remember" class="transparent"> Remember Me</ion-checkbox>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

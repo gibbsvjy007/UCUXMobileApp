@@ -1,0 +1,92 @@
+@import '_mixins.scss';
+.login {
+    .bar-header{
+        .title{
+            padding: 10px;
+        }
+    }
+    .scroll-content {
+        display: table !important;
+        width: 100% !important;
+        height: 100% !important;
+        form {
+            display: table-cell;
+            // vertical-align: middle;
+            .header {
+                img {
+                    display: block;
+                    width: 65%;
+                    margin: 0 auto;
+                    padding-bottom: 10px;
+                }
+            }
+            .list {
+                margin: 0 12px;
+                .item-input {
+                    background: linear-gradient(rgba(255, 255, 255, .2), rgba(255, 255, 255, 0.1));
+                    border: none;
+                    border-radius: 10px;
+                    margin: 15px 0;
+                    padding: 0;
+                    .icon {
+                        font-size: 2em;
+                        color: $white;
+                        padding: 15px;
+                        line-height: 0;
+                        min-width: 20%;
+                        border-right: 3px solid #482a63;
+                    }
+                    input {
+                        padding: 20px;
+                        color: $white;
+                        font-size: 1.1em;
+                        text-transform: uppercase;
+                    }
+                    @include placeholder {
+                        color: $white;
+                    }
+                }
+                .button {
+                    background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .3));
+                    color: $white;
+                    font-size: 1.5em;
+                    border-radius: 15px;
+                    padding: 5px;
+                }
+            }
+            .button.button-light.active,
+            .button.button-light.activated {
+                color: #fff;
+                opacity: inherit;
+            }
+            .item-checkbox {
+                background: transparent;
+                border: none;
+                color: $white;
+                .checkbox {
+                    top: 60%;
+                    .checkbox-icon {
+                        width: 20px;
+                        height: 20px;
+                        &:before {
+                            background: transparent;
+                            border: none !important;
+                            box-shadow: 0px 0px 5px 5px !important;
+                        }
+                    }
+                    input:checked + .checkbox-icon:before {
+                        background: white !important;
+                        border-color: white;
+                        box-shadow: 0px 0px 5px 5px;
+                    }
+                }
+            }
+        }
+    }
+    .bar-footer {
+        .title {
+            font-size: 16px !important;
+            color: #42dca3 !important;
+        }
+    }
+}

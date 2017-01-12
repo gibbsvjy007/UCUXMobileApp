@@ -1,0 +1,25 @@
+.menu {
+    .bar-header{
+        .title{
+            color: $grey !important;
+        }
+    }
+    .scroll-content {
+        background-color: #555;
+        .item {
+            background-color: #555;
+            color: #42dca3;
+            i {
+                font-size: 30px;
+            }
+            span {
+                margin-left: 20px;
+                font-size: 20px;
+                font-weight: 500;
+                position: relative;
+                bottom: 3px;
+                font-family: roboto;
+            }
+        }
+    }
+}
