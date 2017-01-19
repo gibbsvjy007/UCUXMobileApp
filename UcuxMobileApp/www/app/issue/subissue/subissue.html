@@ -1,0 +1,68 @@
+<ion-view class="subissue" view-title="Select Issue" align-title="center" ng-init="vm.init()">
+    <!-- <div id="search-bar">
+        <div class="item item-input-inset">
+            <label class="item-input-wrapper" id="search-input">
+                 <i class="icon my-search placeholder-icon"></i>
+                <input type="text" placeholder="Search" ng-model="query" ng-change="search()">
+            </label>
+        </div>
+    </div> -->
+    <ion-content padding="true" scroll="true">
+        <div class="list">
+            <label>
+                <select class="ion-input-select">
+                    <option>Blue</option>
+                    <option selected>Green</option>
+                    <option>Red</option>
+                </select>
+            </label>
+            <label>
+                <select class="ion-input-select">
+                    <option>Blue</option>
+                    <option selected>Green</option>
+                    <option>Red</option>
+                </select>
+            </label>
+            <label>
+                <select class="ion-input-select">
+                    <option>Blue</option>
+                    <option selected>Green</option>
+                    <option>Red</option>
+                </select>
+            </label>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="item item-icon-left item-radio" style="border: none">
+                    <input type="radio" name="group">
+                    <div class="item-content" style="margin-left:0px">
+                        Unsafe Act
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+            </div>
+            <div class="col">
+                <label class="item item-icon-left item-radio" style="border: none">
+                    <input type="radio" name="group">
+                    <div class="item-content">
+                        Unsafe Condition
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row center">
+            <img src="assets/images/select-issue-img.png">
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <textarea>Lorem ipsum ipsum</textarea>
+        </div>
+        <div class="">
+            <button class="button button-clear assertive pull-right" ng-click="vm.submitReport()" style="line-height: 36px;">
+                Next <i class="icon ion-arrow-right-c"></i>
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

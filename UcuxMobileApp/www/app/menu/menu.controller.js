@@ -8,6 +8,7 @@
 app.controller('MenuCtrl', function($scope, $ionicSideMenuDelegate, MenuData, $utils, $state, $cordovaGoogleAnalytics, $ionicActionSheet) {
     $scope.menuItems = MenuData.getMenu();
     $scope.title = MenuData.title;
+    
     $scope.showMenu = function($event) {
         $ionicSideMenuDelegate.toggleRight();
     };

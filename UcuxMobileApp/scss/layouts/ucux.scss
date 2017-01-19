@@ -49,14 +49,18 @@ body {
         border: none;
         background-image: none;
     }
-    .title,
+    .title {
+        line-height: 50px;
+        color: $white;
+        font-size: 1.5em;
+    }
     .button {
         color: $white;
         font-size: 1.5em;
     }
     margin-top: 8px;
     .buttons-right {
-        right: 30px;
+        right: 10px;
     }
 }
 
@@ -71,6 +75,38 @@ body {
             height: 38px;
         }
     }
+}
+
+.flex {
+    display: flex;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.assertive {
+    color: $danger !important;
+}
+
+.green {
+    color: $green;
+}
+
+.font-13 {
+    font-size: 13px !important;
+}
+
+.white {
+    color: $white;
+}
+
+.no-border-r {
+    border-right: none !important;
+}
+
+.no-border-b {
+    border-bottom: none !important;
 }
 
 @-webkit-keyframes "pulse" {

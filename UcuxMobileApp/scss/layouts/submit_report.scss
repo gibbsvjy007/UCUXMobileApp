@@ -1,0 +1,22 @@
+.submit_report {
+    .scroll-content {
+        top: 80px;
+        background-color: white;
+        margin: 10px;
+        .preview {
+            margin: 15px 0 40px 0;
+            img {
+                border: 3px solid $grey;
+                height: 190px;
+                width: 80%;
+            }
+        }
+        .button-submit-report {
+            border: 2px solid $violet;
+            width: 200px;
+            color: #444;
+            border-radius: 15px;
+            text-transform: uppercase;
+        }
+    }
+}

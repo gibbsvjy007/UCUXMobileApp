@@ -27,6 +27,33 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 controllerAs: 'vm'
             }
         }
+    }).state('app.issue', {
+        url: '/issue',
+        views: {
+            'menuContent': {
+                templateUrl: 'app/issue/issue_list.html',
+                controller: 'IssueListCtrl',
+                controllerAs: 'vm'
+            }
+        }
+    }).state('app.subIssue', {
+        url: '/subIssue',
+        views: {
+            'menuContent': {
+                templateUrl: 'app/issue/subissue/subissue.html',
+                controller: 'SubIssueListCtrl',
+                controllerAs: 'vm'
+            }
+        }
+    }).state('app.submitReport', {
+        url: '/submitReport',
+        views: {
+            'menuContent': {
+                templateUrl: 'app/issue/submit_report/submit_report.html',
+                controller: 'SubmitReportCtrl',
+                controllerAs: 'vm'
+            }
+        }
     });
     $urlRouterProvider.otherwise('/login');
 });

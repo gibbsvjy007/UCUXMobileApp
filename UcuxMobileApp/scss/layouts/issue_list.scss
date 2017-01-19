@@ -1,0 +1,37 @@
+.issue_list {
+    .scroll-content {
+        background-color: rgba(255, 255, 255, 0.3);
+        margin-top: 80px;
+        .row {
+            padding: 0;
+            .col-33 {
+                text-align: center;
+                color: $white;
+                padding: 13px;
+                border-right: 4px solid rgba(53, 51, 94, 0.8);
+                border-bottom: 4px solid rgba(53, 51, 94, 0.8);
+                min-height: 120px;
+                text-transform: uppercase;
+                position: relative;
+                .issue {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 80%;
+                    line-height: 16px;
+                    margin: -25% 0 0 -40%;
+                    i {
+                        font-size: 2em;
+                    }
+                    p {
+                        font-size: 13px;
+                        margin-top: 5px;
+                    }
+                }
+                &.active {
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+            }
+        }
+    }
+}

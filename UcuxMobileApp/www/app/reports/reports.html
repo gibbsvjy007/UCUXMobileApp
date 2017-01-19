@@ -1,8 +1,29 @@
-<ion-view class="report" view-title="My Reports" align-title="center" hide-nav-bar="false" hide-back-button="true">
-  <!--   <ion-header-bar class="bar bar-header" align-title="center">
+<ion-view class="report" cache-view="false" view-title="My Reports" align-title="center" hide-back-button="true" ng-init="vm.init()">
+    <!--   <ion-header-bar class="bar bar-header" align-title="center">
         <div class="title title-center header-item">My Reports</div>
     </ion-header-bar> -->
-    <ion-content padding="true" scroll="false">
-      
+    <div id="search-bar">
+        <div class="item item-input-inset">
+            <label class="item-input-wrapper" id="search-input">
+                 <i class="icon my-search placeholder-icon"></i>
+                <input type="text" placeholder="Search" ng-model="query" ng-change="search()">
+            </label>
+        </div>
+    </div>
+    <ion-content padding="false">
+        <ion-list>
+            <ion-item ng-repeat="item in vm.reports" class="item-thumbnail-left" ng-click="vm.showDetail()">
+                <img ng-src="{{item.img}}">
+                <h2 class="uppercase">{{item.title}}</h2>
+                <h4 class="uppercase">{{item.subTitle}}</h4>
+                <br>
+                <p class="assertive">{{item.desc}}</p>
+                <div class="bottom-line white">
+                    <span class="pull-left flex"><i class="icon {{item.icon_status}} {{item.status}} padding-right"></i> <span class="font-13">Status: {{item.status}}</span></span>
+                    <span class="pull-right flex"><i class="fa fa-calendar  padding-right"></i> <span class="font-13">{{item.createdOn}}</span></span>
+                </div>                
+            </ion-item>
+            
+        </ion-list>
     </ion-content>
 </ion-view>

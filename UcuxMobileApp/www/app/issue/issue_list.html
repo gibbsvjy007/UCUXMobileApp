@@ -1,0 +1,55 @@
+<ion-view class="issue_list" view-title="Select Issue" align-title="center"  ng-init="vm.init()">
+    <!--   <ion-header-bar class="bar bar-header" align-title="center">
+        <div class="title title-center header-item">My Reports</div>
+    </ion-header-bar> -->
+    <div id="search-bar">
+        <div class="item item-input-inset">
+            <label class="item-input-wrapper" id="search-input">
+                <i class="icon my-search placeholder-icon"></i>
+                <input type="text" placeholder="Search" ng-model="query" ng-change="search()">
+            </label>
+        </div>
+    </div>
+    <ion-content padding="false">
+        <div class="row" ng-repeat="item in vm.issueList" ng-if="$index % 3 === 0">
+            <div ng-click="vm.showSubIssue()" class="col-33" ng-if="$index < vm.issueList.length">
+                <div class="issue">                
+                    <i class="{{vm.issueList[$index].icon}}"></i>
+                    <p class="caption">
+                        {{vm.issueList[$index].name}}
+                    </p>
+                </div>
+            </div>
+            <div class="col-33" ng-click="vm.showSubIssue()" ng-if="$index + 1 < vm.issueList.length">
+                <div class="issue">
+                    <i class="{{vm.issueList[$index + 1].icon}}"></i>
+                    <p class="caption">
+                        {{vm.issueList[$index + 1].name}}
+                    </p>
+                </div>
+            </div>
+            <div class="col-33 no-border-r" ng-click="vm.showSubIssue()" ng-if="$index + 2 < vm.issueList.length">
+                <div class="issue">
+                    <i class="{{vm.issueList[$index + 2].icon}}"></i>
+                    <p class="caption">
+                        {{vm.issueList[$index + 2].name}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+<!-- <div class="row" ng-repeat="image in images" ng-if="$index % 4 === 0">
+        <div class="col col-25" ng-if="$index < images.length">
+            <img ng-src="{{images[$index].src}}" width="100%" />
+        </div>
+        <div class="col col-25" ng-if="$index + 1 < images.length">
+            <img ng-src="{{images[$index + 1].src}}" width="100%" />
+        </div>
+        <div class="col col-25" ng-if="$index + 2 < images.length">
+            <img ng-src="{{images[$index + 2].src}}" width="100%" />
+        </div>
+        <div class="col col-25" ng-if="$index + 3 < images.length">
+            <img ng-src="{{images[$index + 3].src}}" width="100%" />
+        </div>
+    </div> -->

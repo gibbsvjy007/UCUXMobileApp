@@ -1,4 +1,4 @@
-var modules = ['ionic', 'ngCordova'];
+var modules = ['ionic', 'ngCordova', 'angular.filter'];
 
 var app = angular.module('ucux', modules)
     .run(function($ionicPlatform, $http, $ionicPopup, $rootScope, $ionicPopup, $ionicHistory, $state, $cordovaGoogleAnalytics, CONFIG) {
