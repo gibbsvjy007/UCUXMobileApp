@@ -67,6 +67,32 @@ app.factory('$utils', function($state, $ionicLoading, $localStorage, $cordovaToa
             template: dialog.message
         });
     };
+    utils.getUserId = function() {
+        return $localStorage.get('UserId');
+    };
+    /**
+     * [isBrowser description]
+     * @return {Boolean} [description]
+     */
+    utils.isBrowser = function() {
+        var app = document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1;
+        if (app) {
+            return false; //Phonegap
+        } else {
+            return true; //Web
+        }
+    };
+
+    utils.getDeviceType = function() {
+        if (ionic.Platform.isAndroid()) {
+            return 1;
+        } else {
+            return 2;
+        }
+    };
+    utils.getDeviceUUID = function() {
+        return utils.isBrowser() ? 'XXXX': device.uuid;
+    };
     utils.alert = function(alertObj) {
         if (!utils.notBlank(alertObj.title))
             alertObj.title = 'Alert';

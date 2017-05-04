@@ -13,19 +13,22 @@
                 min-height: 120px;
                 text-transform: uppercase;
                 position: relative;
+                height: auto;
+                overflow: scroll;
                 .issue {
                     position: absolute;
-                    top: 50%;
+                    top: 45%;
                     left: 50%;
-                    width: 80%;
-                    line-height: 16px;
-                    margin: -25% 0 0 -40%;
+                    width: 90%;
+                    line-height: 13px;
+                    margin: -25% 0 0px -45%;
                     i {
-                        font-size: 2em;
+                        font-size: 1.7em;
                     }
                     p {
-                        font-size: 13px;
-                        margin-top: 5px;
+                        font-size: 12px;
+                        margin-top: 4px;
+                        text-transform: capitalize;
                     }
                 }
                 &.active {

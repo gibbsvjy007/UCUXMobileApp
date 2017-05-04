@@ -1,6 +1,10 @@
 {
     "name": "UcuxMobileApp",
     "app_id": "",
+    "proxies": [{
+        "path": "/api/SecurityApi/",
+        "proxyUrl": "http://ucux.co/api/SecurityApi/"
+    }],
     "watch": {
         "sass": [
             "scss/**/*.scss"

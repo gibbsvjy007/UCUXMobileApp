@@ -1,0 +1,68 @@
+<ion-view class="subissue" view-title="{{title}}" align-title="center" ng-init="vm.init()">
+    <!-- <div id="search-bar">
+        <div class="item item-input-inset">
+            <label class="item-input-wrapper" id="search-input">
+                 <i class="icon my-search placeholder-icon"></i>
+                <input type="text" placeholder="Search" ng-model="query" ng-change="search()">
+            </label>
+        </div>
+    </div> -->
+    <ion-content padding="true" scroll="true">
+        <div class="list">
+            <label>
+                <!-- <option ng-repeat="item in vm.allCategory" value="{{item.CategoryId}}">{{item.Name}}</option> -->
+                <select class="ion-input-select" ng-model="vm.selectedCategory" ng-change="vm.getCategoryList($event)" ng-options="item.CategoryId as item.Name for item in vm.allCategory">
+                    <option value="">Please select</option>
+                </select>
+            </label>
+            <label>
+                <select class="ion-input-select" ng-model="vm.selectedSubCategory" ng-change="vm.getSubCategory($event)" ng-options="item.CategoryId as item.Name for item in vm.subCategoryList">
+                    <option value="">Please select</option>
+                </select>
+            </label>
+             <label ng-show="vm.subCategory && vm.subSubCategoryList">
+                <select class="ion-input-select" ng-model="vm.selectedSubSubCategory" ng-options="item.CategoryId as item.Name for item in vm.subSubCategoryList">
+                    <option value="">Please select</option>
+                </select>
+            </label>
+            <label>
+                <select class="ion-input-select" ng-model="vm.selectedZone" ng-options="item.ZoneId as item.Name for item in vm.zoneList">
+                    <option value="">Location / Zone of Issue</option>
+                </select>
+            </label>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label class="item item-icon-left item-radio" style="border: none">
+                    <input type="radio" name="group" value="Unsafe Act" ng-model="vm.condition">
+                    <div class="item-content" style="margin-left:0px">
+                        Unsafe Act
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+            </div>
+            <div class="col">
+                <label class="item item-icon-left item-radio" style="border: none">
+                    <input type="radio" name="group" value="Unsafe Condition" ng-model="vm.condition">
+                    <div class="item-content">
+                        Unsafe Condition
+                    </div>
+                    <i class="radio-icon ion-checkmark"></i>
+                </label>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <!-- <div class="row center">
+            <img src="assets/images/select-issue-img.png" width="100" height="120">
+        </div> -->
+        <div class="clearfix"></div>
+        <div class="row">
+            <textarea name="desc" ng-model="vm.remarks" ng-change="vm.enableNext();" placeholder="Remarks"></textarea>
+        </div>
+        <div class="">
+            <button class="button button-clear assertive pull-right" ng-disabled="vm.notAllowed" ng-click="vm.nextPage()" style="line-height: 36px;">
+                <i class="icon ion-arrow-right-c" style="font-size: 20px;"></i>
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

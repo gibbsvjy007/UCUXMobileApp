@@ -1,11 +1,12 @@
 app.service('toast',
-    function($utils, $cordovaToast) {
+    function($utils, $cordovaToast, ionicToast) {
         var toast = {};
         toast.show = function(message) {
-            $cordovaToast.show(message, 'long', 'bottom');
-        };
-        toast.error = function(message) {
-            $cordovaToast.show(message, 'long', 'bottom');
+            if ($utils.isBrowser()) {
+                ionicToast.show(message, 'bottom', true, 2500);
+            } else {
+                $cordovaToast.show(message, 'long', 'bottom');
+            }
         };
         return toast;
     });

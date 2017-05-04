@@ -1,0 +1,44 @@
+<ion-view class="activation" view-title="Activate Your Application" align-title="center" hide-nav-bar="false" hide-back-button="true">
+    <ion-header-bar class="bar-stable bar bar-header" align-title="center">
+        <div class="title title-center header-item">Activate Your Application</div>
+    </ion-header-bar>
+    <ion-content padding="true" overflow-scroll="false">
+        <form>
+            <div class="row responsive-md">
+                <div class="col col-50 col-offset-25" align="center">
+                    <div class="header text-center">
+                        <img src="assets/images/logo.png" alt="logo" />
+                    </div>
+                    <div class="list">
+                        <p>Enter Phone Number</p>
+                        <label class="item item-input">
+                            <input type="text" placeholder="Phone Number" ng-model="vm.phoneNumber">
+                        </label>
+                        <button class="mv-10 button button-block" ng-click="vm.doVerify()">
+                            Verify
+                        </button>
+                        <p class="mv-10">Please Enter The 4 Digit Pin
+                            <br> Received By SMS to your Phone</p>
+                        <div class="digits_section">
+                            <div class="item item-input">
+                                <input type="text" ng-model="vm.otp1" placeholder="0">
+                            </div>
+                            <div class="item item-input">
+                                <input type="text" ng-model="vm.otp2" placeholder="0">
+                            </div>
+                            <div class="item item-input">
+                                <input type="text" ng-model="vm.otp3" placeholder="0">
+                            </div>
+                            <div class="item item-input">
+                                <input type="text" ng-model="vm.otp4" placeholder="0">
+                            </div>
+                        </div>
+                        <button class="button button-block" ng-click="vm.completeVerification()">
+                            Complete Verification
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

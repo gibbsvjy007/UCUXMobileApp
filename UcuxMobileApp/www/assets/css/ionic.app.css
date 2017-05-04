@@ -12206,7 +12206,8 @@ body {
     height: 38px; }
 
 .flex {
-  display: flex; }
+  display: flex;
+  align-items: center; }
 
 .uppercase {
   text-transform: uppercase; }
@@ -12220,6 +12221,15 @@ body {
 .font-13 {
   font-size: 13px !important; }
 
+.font-12 {
+  font-size: 12px !important; }
+
+.font-11 {
+  font-size: 11px !important; }
+
+.mb-5-min {
+  margin-bottom: -5px !important; }
+
 .white {
   color: #ffffff; }
 
@@ -12228,6 +12238,54 @@ body {
 
 .no-border-b {
   border-bottom: none !important; }
+
+.width-25 {
+  width: 25%; }
+
+.mv-30 {
+  margin: 30px 0 !important; }
+
+.mv-10 {
+  margin: 10px 0 !important; }
+
+.mt-10 {
+  margin-top: 10px; }
+
+.title {
+  margin-right: 20px !important;
+  margin-left: 0 !important;
+  font-size: 15px !important; }
+
+.transparent {
+  background: transparent !important; }
+
+.image-modal {
+  width: 100% !important;
+  height: 100%;
+  top: 0 !important;
+  left: 0 !important; }
+
+.fullscreen-image {
+  max-width: 100%;
+  max-height: 100%;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50vh; }
+
+/* Fix modal backdrop for smaller devices */
+@media (max-width: 679px) {
+  .active .modal-backdrop-bg {
+    opacity: .5; }
+  .modal-backdrop-bg {
+    -webkit-transition: opacity 300ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
+    background-color: #000;
+    opacity: 0; } }
 
 @-webkit-keyframes "pulse" {
   0% {
@@ -12246,75 +12304,176 @@ body {
     -webkit-transform: scale(1);
     opacity: 0.0; } }
 
+.activation .scroll-content {
+  width: 100% !important;
+  height: 100% !important; }
+  .activation .scroll-content form .header img {
+    display: block;
+    width: 150px;
+    height: 90px;
+    margin: 0 auto;
+    padding-bottom: 10px; }
+  .activation .scroll-content form .list {
+    margin: 0 12px; }
+    .activation .scroll-content form .list p {
+      color: #fff;
+      font-size: 16px; }
+    .activation .scroll-content form .list .item-input {
+      background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+      border: none;
+      border-radius: 10px;
+      margin: 15px 0;
+      padding: 0; }
+      .activation .scroll-content form .list .item-input input {
+        padding: 25px 15px;
+        color: #ffffff;
+        font-size: 1.1em; }
+      .activation .scroll-content form .list .item-input ::-webkit-input-placeholder {
+        color: #ffffff;
+        opacity: 0.5; }
+      .activation .scroll-content form .list .item-input :-moz-placeholder {
+        color: #ffffff;
+        opacity: 0.5; }
+      .activation .scroll-content form .list .item-input ::-moz-placeholder {
+        color: #ffffff;
+        opacity: 0.5; }
+      .activation .scroll-content form .list .item-input :-ms-input-placeholder {
+        color: #ffffff;
+        opacity: 0.5; }
+    .activation .scroll-content form .list .digits_section .item-input {
+      width: 20%;
+      display: inline-block; }
+      .activation .scroll-content form .list .digits_section .item-input input {
+        width: 60%;
+        height: 50px;
+        padding: 0;
+        text-align: center; }
+    .activation .scroll-content form .list .button {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3));
+      color: #ffffff;
+      font-size: 1.5em;
+      border-radius: 15px; }
+  .activation .scroll-content form .button.button-light.active,
+  .activation .scroll-content form .button.button-light.activated {
+    color: #fff;
+    opacity: inherit; }
+
+.password .scroll-content form .list {
+  margin: 0 12px; }
+  .password .scroll-content form .list p {
+    color: #fff;
+    font-size: 16px; }
+  .password .scroll-content form .list .item-input {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    border: none;
+    border-radius: 10px;
+    margin: 15px 0;
+    padding: 0; }
+    .password .scroll-content form .list .item-input input {
+      padding: 30px 20px;
+      color: #ffffff;
+      font-size: 1.1em; }
+    .password .scroll-content form .list .item-input ::-webkit-input-placeholder {
+      color: #ffffff;
+      opacity: 0.5; }
+    .password .scroll-content form .list .item-input :-moz-placeholder {
+      color: #ffffff;
+      opacity: 0.5; }
+    .password .scroll-content form .list .item-input ::-moz-placeholder {
+      color: #ffffff;
+      opacity: 0.5; }
+    .password .scroll-content form .list .item-input :-ms-input-placeholder {
+      color: #ffffff;
+      opacity: 0.5; }
+  .password .scroll-content form .list .digits_section .item-input {
+    width: 20%;
+    display: inline-block; }
+    .password .scroll-content form .list .digits_section .item-input input {
+      width: 60%;
+      height: 50px;
+      padding: 0;
+      text-align: center; }
+  .password .scroll-content form .list .button {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3));
+    color: #ffffff;
+    font-size: 1.5em;
+    border-radius: 15px;
+    padding: 5px; }
+
+.password .scroll-content form .button.button-light.active,
+.password .scroll-content form .button.button-light.activated {
+  color: #fff;
+  opacity: inherit; }
+
 .login .bar-header .title {
   padding: 10px; }
 
-.login .scroll-content {
-  display: table !important;
-  width: 100% !important;
-  height: 100% !important; }
-  .login .scroll-content form {
-    display: table-cell; }
-    .login .scroll-content form .header img {
-      display: block;
-      width: 65%;
-      margin: 0 auto;
-      padding-bottom: 10px; }
-    .login .scroll-content form .list {
-      margin: 0 12px; }
-      .login .scroll-content form .list .item-input {
-        background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
-        border: none;
-        border-radius: 10px;
-        margin: 15px 0;
-        padding: 0; }
-        .login .scroll-content form .list .item-input .icon {
-          font-size: 2em;
-          color: #ffffff;
-          padding: 15px;
-          line-height: 0;
-          min-width: 20%;
-          border-right: 3px solid #482a63; }
-        .login .scroll-content form .list .item-input input {
-          padding: 20px;
-          color: #ffffff;
-          font-size: 1.1em;
-          text-transform: uppercase; }
-        .login .scroll-content form .list .item-input ::-webkit-input-placeholder {
-          color: #ffffff; }
-        .login .scroll-content form .list .item-input :-moz-placeholder {
-          color: #ffffff; }
-        .login .scroll-content form .list .item-input ::-moz-placeholder {
-          color: #ffffff; }
-        .login .scroll-content form .list .item-input :-ms-input-placeholder {
-          color: #ffffff; }
-      .login .scroll-content form .list .button {
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3));
-        color: #ffffff;
-        font-size: 1.5em;
-        border-radius: 15px;
-        padding: 5px; }
-    .login .scroll-content form .button.button-light.active,
-    .login .scroll-content form .button.button-light.activated {
-      color: #fff;
-      opacity: inherit; }
-    .login .scroll-content form .item-checkbox {
-      background: transparent;
-      border: none;
-      color: #ffffff; }
-      .login .scroll-content form .item-checkbox .checkbox {
-        top: 60%; }
-        .login .scroll-content form .item-checkbox .checkbox .checkbox-icon {
-          width: 20px;
-          height: 20px; }
-          .login .scroll-content form .item-checkbox .checkbox .checkbox-icon:before {
-            background: transparent;
-            border: none !important;
-            box-shadow: 0px 0px 5px 5px !important; }
-        .login .scroll-content form .item-checkbox .checkbox input:checked + .checkbox-icon:before {
-          background: white !important;
-          border-color: white;
-          box-shadow: 0px 0px 5px 5px; }
+.login .scroll-content form .header img {
+  display: block;
+  width: 65%;
+  margin: 0 auto;
+  padding-bottom: 10px; }
+
+.login .scroll-content form .list {
+  margin: 0 12px; }
+  .login .scroll-content form .list .item-input {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    border: none;
+    border-radius: 10px;
+    margin: 15px 0;
+    padding: 0; }
+    .login .scroll-content form .list .item-input .icon {
+      font-size: 2em;
+      color: #ffffff;
+      padding: 15px;
+      line-height: 0;
+      min-width: 20%;
+      border-right: 3px solid #482a63; }
+    .login .scroll-content form .list .item-input input {
+      padding: 20px;
+      color: #ffffff;
+      font-size: 1.1em; }
+    .login .scroll-content form .list .item-input ::-webkit-input-placeholder {
+      color: #ffffff;
+      opacity: 0.5; }
+    .login .scroll-content form .list .item-input :-moz-placeholder {
+      color: #ffffff;
+      opacity: 0.5; }
+    .login .scroll-content form .list .item-input ::-moz-placeholder {
+      color: #ffffff;
+      opacity: 0.5; }
+    .login .scroll-content form .list .item-input :-ms-input-placeholder {
+      color: #ffffff;
+      opacity: 0.5; }
+  .login .scroll-content form .list .button {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3));
+    color: #ffffff;
+    font-size: 1.5em;
+    border-radius: 15px;
+    padding: 5px; }
+
+.login .scroll-content form .button.button-light.active,
+.login .scroll-content form .button.button-light.activated {
+  color: #fff;
+  opacity: inherit; }
+
+.login .scroll-content form .item-checkbox {
+  background: transparent;
+  border: none;
+  color: #ffffff; }
+  .login .scroll-content form .item-checkbox .checkbox {
+    top: 60%; }
+    .login .scroll-content form .item-checkbox .checkbox .checkbox-icon {
+      width: 20px;
+      height: 20px; }
+      .login .scroll-content form .item-checkbox .checkbox .checkbox-icon:before {
+        background: transparent;
+        border: none !important;
+        box-shadow: 0px 0px 5px 5px !important; }
+    .login .scroll-content form .item-checkbox .checkbox input:checked + .checkbox-icon:before {
+      background: white !important;
+      border-color: white;
+      box-shadow: 0px 0px 5px 5px; }
 
 .login .bar-footer .title {
   font-size: 16px !important;
@@ -12375,13 +12534,13 @@ body {
 
 .my-back-button {
   content: url("../../assets/images/back-btn.png");
-  width: 70px;
-  height: 40px; }
+  width: 60px;
+  height: 35px; }
 
 .my-menu-button {
   content: url("../../assets/images/menu-btn.png");
-  width: 70px;
-  height: 40px; }
+  width: 60px;
+  height: 35px; }
 
 .my-search {
   content: url("../../assets/images/search-icon.png");
@@ -12425,10 +12584,11 @@ select {
     padding: 4px; }
     .report .scroll-content .list .item {
       overflow: visible;
-      margin-bottom: 70px; }
+      margin-bottom: 40px; }
       .report .scroll-content .list .item img {
         max-width: 90px;
-        max-height: 80px; }
+        max-height: 80px;
+        top: 21%; }
       .report .scroll-content .list .item h2 {
         margin-left: 10px;
         font-size: 14px;
@@ -12448,13 +12608,15 @@ select {
         position: absolute;
         bottom: -30px;
         overflow: visible;
-        width: 95%;
-        left: 10px; }
+        width: 100%;
+        left: 0px; }
         .report .scroll-content .list .item .bottom-line i {
-          font-size: 1.2em; }
+          font-size: 1.1em; }
       .report .scroll-content .list .item .Submitted {
         color: #ef473a; }
       .report .scroll-content .list .item .Completed {
+        color: #23ff00; }
+      .report .scroll-content .list .item .Open {
         color: #23ff00; }
 
 .issue_list .scroll-content {
@@ -12470,19 +12632,22 @@ select {
       border-bottom: 4px solid rgba(53, 51, 94, 0.8);
       min-height: 120px;
       text-transform: uppercase;
-      position: relative; }
+      position: relative;
+      height: auto;
+      overflow: scroll; }
       .issue_list .scroll-content .row .col-33 .issue {
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: 50%;
-        width: 80%;
-        line-height: 16px;
-        margin: -25% 0 0 -40%; }
+        width: 90%;
+        line-height: 13px;
+        margin: -25% 0 0px -45%; }
         .issue_list .scroll-content .row .col-33 .issue i {
-          font-size: 2em; }
+          font-size: 1.7em; }
         .issue_list .scroll-content .row .col-33 .issue p {
-          font-size: 13px;
-          margin-top: 5px; }
+          font-size: 12px;
+          margin-top: 4px;
+          text-transform: capitalize; }
       .issue_list .scroll-content .row .col-33.active {
         background-color: rgba(255, 255, 255, 0.2); }
 
@@ -12490,19 +12655,27 @@ select {
   top: 80px;
   background-color: white;
   margin: 10px; }
+  .subissue .scroll-content select {
+    padding-right: 60px;
+    font-size: 13px; }
+    .subissue .scroll-content select option {
+      overflow-x: hidden !important;
+      padding-right: 50px;
+      text-overflow: ellipsis; }
   .subissue .scroll-content .item-icon-left .item-content {
     padding-left: 3em !important;
     padding-top: 5px !important;
     padding-bottom: 5px !important; }
   .subissue .scroll-content .item-icon-left i {
     left: 0;
-    padding-top: 2px !important;
+    padding-top: 1px !important;
     padding-bottom: 5px !important;
     right: auto;
     color: #D4201F !important;
     font-size: 20px !important; }
   .subissue .scroll-content .item-radio .item-content {
-    padding: 0; }
+    padding: 0;
+    font-size: 13px; }
   .subissue .scroll-content .item-radio input ~ .radio-icon {
     visibility: visible !important; }
   .subissue .scroll-content .item-radio > .radio-icon:before {
@@ -12522,12 +12695,43 @@ select {
   top: 80px;
   background-color: white;
   margin: 10px; }
+  .submit_report .scroll-content .attach_title {
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+  .submit_report .scroll-content .item-icon-left .item-content {
+    padding-left: 3em !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important; }
+  .submit_report .scroll-content .item-icon-left i {
+    left: 0;
+    padding-top: 1px !important;
+    padding-bottom: 5px !important;
+    right: auto;
+    color: #D4201F !important;
+    font-size: 20px !important; }
+  .submit_report .scroll-content .item-radio .item-content {
+    padding: 0;
+    font-size: 13px; }
+  .submit_report .scroll-content .item-radio input ~ .radio-icon {
+    visibility: visible !important; }
+  .submit_report .scroll-content .item-radio > .radio-icon:before {
+    content: "\f3a6" !important;
+    /*deselected - Ionic class = ion-android-radio-button-off */ }
+  .submit_report .scroll-content .item-radio > input[type=radio]:checked ~ .radio-icon:before {
+    content: "\f3a7" !important;
+    /*selected Ionic class = ion-android-radio-button-on */ }
   .submit_report .scroll-content .preview {
     margin: 15px 0 40px 0; }
     .submit_report .scroll-content .preview img {
       border: 3px solid #707070;
-      height: 190px;
-      width: 80%; }
+      background: url(../../assets/images/placeholder.jpg) no-repeat;
+      min-height: 200px;
+      width: 80%;
+      background-size: cover;
+      background-position: center center; }
   .submit_report .scroll-content .button-submit-report {
     border: 2px solid #3c0a5b;
     width: 200px;

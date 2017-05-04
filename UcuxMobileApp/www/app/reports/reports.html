@@ -5,25 +5,38 @@
     <div id="search-bar">
         <div class="item item-input-inset">
             <label class="item-input-wrapper" id="search-input">
-                 <i class="icon my-search placeholder-icon"></i>
-                <input type="text" placeholder="Search" ng-model="query" ng-change="search()">
+                <i class="icon my-search placeholder-icon"></i>
+                <input type="text" placeholder="Search" ng-model="vm.query" ng-change="search()">
             </label>
         </div>
     </div>
     <ion-content padding="false">
         <ion-list>
-            <ion-item ng-repeat="item in vm.reports" class="item-thumbnail-left" ng-click="vm.showDetail()">
-                <img ng-src="{{item.img}}">
-                <h2 class="uppercase">{{item.title}}</h2>
-                <h4 class="uppercase">{{item.subTitle}}</h4>
-                <br>
-                <p class="assertive">{{item.desc}}</p>
+            <ion-item ng-repeat="item in vm.reports | filter: vm.query" class="item-thumbnail-left">
+                <img ng-click="vm.showImage(item.FilePath)" src="{{item.FilePath}}">
+                <h2 class="uppercase">{{item.Category}}</h2>
+                <p>
+                    <span class="muted font-12">{{item.Category1 || 'N/A'}}</span> -
+                    <span class="muted font-12">{{item.Category2 || 'N/A'}}</span>
+                    <span class="muted font-12" ng-show="item.Category3">- {{item.Category3 || 'N/A'}}</span>
+                </p>
+                <p class="mb-5-min"><b>Location: </b><span>{{item.Location || 'N/A'}}</span></p>
+                <p class="mb-5-min"><b>Zone: </b><span>{{item.Zone || 'N/A'}}</span></p>
+                <p class="mb-5-min"><b>Department: </b><span>{{item.Department || 'N/A'}}</span></p>
+                <p class="mb-5-min">
+                    <strong>Remarks:</strong> {{item.Remarks || 'N/A' }}
+                </p>
+                <p class="assertive mb-5-min">
+                    <strong>Risk:</strong> {{item.Risk || 'N/A' }}
+                </p>
+                <p class="assertive mb-5-min">
+                    <strong>Condition:</strong> {{item.Condition || 'N/A'}}</p>
                 <div class="bottom-line white">
-                    <span class="pull-left flex"><i class="icon {{item.icon_status}} {{item.status}} padding-right"></i> <span class="font-13">Status: {{item.status}}</span></span>
-                    <span class="pull-right flex"><i class="fa fa-calendar  padding-right"></i> <span class="font-13">{{item.createdOn}}</span></span>
-                </div>                
+                    <span class="pull-left flex"><i class="icon ion-ios-chatbubble {{item.Status}} padding-right"></i> <span class="font-12">Status: <span class="font-11 muted">{{item.Status == 'Close' ? 'Closed' : item.Status }}</span></span>
+                    </span>
+                    <span class="pull-right flex"><i class="fa fa-calendar  padding-right"></i> <span class="font-12">{{item.IssueDatetime}}</span></span>
+                </div>
             </ion-item>
-            
         </ion-list>
     </ion-content>
 </ion-view>

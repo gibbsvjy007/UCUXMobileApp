@@ -49,3 +49,27 @@ gulp.task('git-check', function(done) {
   }
   done();
 });
+/* Proxy settings*/
+
+// var replace = require('replace');
+// var replaceFiles = ['./www/js/app.js'];
+
+// gulp.task('add-proxy', function() {
+//   return replace({
+//     regex: "http://ucux.co/api/SecurityApi/",
+//     replacement: "http://localhost:8100/api/SecurityApi/",
+//     paths: replaceFiles,
+//     recursive: false,
+//     silent: false,
+//   });
+// })
+
+// gulp.task('remove-proxy', function() {
+//   return replace({
+//     regex: "http://localhost:8100/api/SecurityApi/",
+//     replacement: "http://ucux.co/api/SecurityApi/",
+//     paths: replaceFiles,
+//     recursive: false,
+//     silent: false,
+//   });
+// })

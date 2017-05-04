@@ -24,6 +24,8 @@ $fa-font-path: "../../lib/font-awesome/fonts" !default;
 @import "variable.scss";
 @import "_mixins.scss";
 @import "layouts/ucux.scss";
+@import "layouts/activation.scss";
+@import "layouts/password.scss";
 @import "layouts/login.scss";
 @import "layouts/main.scss";
 @import "layouts/reports.scss";

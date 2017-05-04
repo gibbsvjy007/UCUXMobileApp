@@ -8,10 +8,11 @@
             padding: 4px;
             .item {
                 overflow: visible;
-                margin-bottom: 70px;
+                margin-bottom: 40px;
                 img {
                     max-width: 90px;
                     max-height: 80px;
+                    top: 21%;
                 }
                 h2 {
                     margin-left: 10px;
@@ -36,16 +37,19 @@
                     position: absolute;
                     bottom: -30px;
                     overflow: visible;
-                    width: 95%;
-                    left: 10px;
+                    width: 100%;
+                    left: 0px;
                     i {
-                        font-size: 1.2em;
+                        font-size: 1.1em;
                     }
                 }
                 .Submitted {
                     color: $assertive;
                 }
                 .Completed {
+                    color: $success;
+                }
+                .Open {
                     color: $success;
                 }
             }

@@ -5,28 +5,33 @@ app.constant('apiList', {
         var service = {};
         var baseUrl = '';
         var handleError = function(error) {
-            utils.hideLoading();
-            if (utils.notBlank(error)) {
-                toast.show(error.data.message);
+            if ($utils.notBlank(error) && error.status != 400) {
+                if (error.data)
+                    toast.show(error.data.Message);
             } else {
-                toast.show('Soething went wrong while processing your request. Please Contact Administrator.');
+                toast.show('Something went wrong while processing your request. Please Contact Administrator.');
             }
         };
 
-        service.authenticate = function(userObj) {
+        service.httpRequest = function(request) {
             var deferred = $q.defer();
-            var url = baseUrl + utils.formatString(apiList.login, { email: userObj.email, password: userObj.password });
-            utils.showLoading();
-            $http({
-                method: 'POST',
-                url: url,
-                data: {},
+            var httpObj = {
+                method: request.method,
+                url: request.url,
+                data: $utils.notBlank(request.data) ? angular.toJson(request.data) : {},
                 headers: { 'Content-Type': 'application/json' }
-            }).then(function(response) {
+            };
+            $utils.showLoading();
+            $http(httpObj).then(function(response) {
                 deferred.resolve(response);
-                utils.hideLoading();
+                $utils.hideLoading();
             }, function(error) {
-                deferred.reject(handleError(error));
+                $utils.hideLoading();
+                if (request.errorCall) {
+                    deferred.reject(error);
+                } else {
+                    handleError(error);
+                }
             });
             return deferred.promise;
         };

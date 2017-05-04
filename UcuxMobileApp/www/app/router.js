@@ -1,5 +1,15 @@
-app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
-    $stateProvider.state('login', {
+app.config(function($stateProvider, $urlRouterProvider, $locationProvider, $ionicConfigProvider) {
+    $stateProvider.state('activation', {
+        url: '/activation',
+        controller: 'activationCtrl',
+        controllerAs: 'vm',
+        templateUrl: 'app/activation/activation.html'
+    }).state('password', {
+        url: '/password',
+        controller: 'passwordCtrl',
+        controllerAs: 'vm',
+        templateUrl: 'app/password/password.html'
+    }).state('login', {
         url: '/login',
         controller: 'loginCtrl',
         controllerAs: 'login',
@@ -18,21 +28,12 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
                 controllerAs: 'vm'
             }
         }
-    }).state('app.report-detail', {
-        url: '/detail',
+    }).state('app.create_report', {
+        url: '/create_report',
         views: {
             'menuContent': {
-                templateUrl: 'app/reports/report.detail.html',
-                controller: 'ReportDetailCtrl',
-                controllerAs: 'vm'
-            }
-        }
-    }).state('app.issue', {
-        url: '/issue',
-        views: {
-            'menuContent': {
-                templateUrl: 'app/issue/issue_list.html',
-                controller: 'IssueListCtrl',
+                templateUrl: 'app/create_report/create_report.html',
+                controller: 'CreateReportCtrl',
                 controllerAs: 'vm'
             }
         }
@@ -40,7 +41,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         url: '/subIssue',
         views: {
             'menuContent': {
-                templateUrl: 'app/issue/subissue/subissue.html',
+                templateUrl: 'app/create_report/subissue/subissue.html',
                 controller: 'SubIssueListCtrl',
                 controllerAs: 'vm'
             }
@@ -49,11 +50,15 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         url: '/submitReport',
         views: {
             'menuContent': {
-                templateUrl: 'app/issue/submit_report/submit_report.html',
+                templateUrl: 'app/create_report/submit_report/submit_report.html',
                 controller: 'SubmitReportCtrl',
                 controllerAs: 'vm'
             }
         }
     });
-    $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/activation');
+    // $locationProvider.html5Mode({
+    //     enabled: true,
+    //     requireBase: false
+    // });
 });

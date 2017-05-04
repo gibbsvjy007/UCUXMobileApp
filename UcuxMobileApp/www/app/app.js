@@ -1,7 +1,7 @@
-var modules = ['ionic', 'ngCordova', 'angular.filter'];
+var modules = ['ionic', 'ngCordova', 'angular.filter', 'ionic-toast'];
 
 var app = angular.module('ucux', modules)
-    .run(function($ionicPlatform, $http, $ionicPopup, $rootScope, $ionicPopup, $ionicHistory, $state, $cordovaGoogleAnalytics, CONFIG) {
+    .run(function($ionicPlatform, $http, $ionicPopup, $utils, $rootScope, $ionicPopup, $ionicHistory, $state, $cordovaGoogleAnalytics, CONFIG, $localStorage) {
         $ionicPlatform.ready(function() {
             $rootScope.currentYear = new Date().getFullYear();
             if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
@@ -13,11 +13,31 @@ var app = angular.module('ucux', modules)
                 // org.apache.cordova.statusbar required
                 StatusBar.styleDefault();
             }
-           
+
         });
+        //Set global variables
+        $rootScope.baseURL = CONFIG.BASE_URL;
         //toState.name - handle the state change
         $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+            var loggedInUser = $localStorage.get('currentUser');
+            var isAppActivated = $localStorage.get('activation');
+            if (isAppActivated) {
+                if ($utils.notBlank(loggedInUser)) {
+                    if (toState.name == 'login' || toState.name == 'activation') {
+                        $state.go('app.create_report');
+                    }
+                } else {
+                    if (toState.name == 'password') {
+                        $state.go('password');
+                    } else {
+                        $state.go('login');
+                    }
 
+                }
+
+            }
+            $('.back-text').html("");
+            $rootScope.currentUser = loggedInUser;
         });
         // handling the application back button
         $rootScope.back = function() {
@@ -42,12 +62,3 @@ var app = angular.module('ucux', modules)
             }
         }, 100);
     });
-
-app.isBrowser = function() {
-    var app = document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1;
-    if (app) {
-        return false; //Phonegap
-    } else {
-        return true; //Web
-    }
-};

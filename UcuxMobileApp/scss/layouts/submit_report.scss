@@ -3,12 +3,52 @@
         top: 80px;
         background-color: white;
         margin: 10px;
+        .attach_title {
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+            margin-top: 10px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+        .item-icon-left .item-content {
+            padding-left: 3em !important;
+            padding-top: 5px !important;
+            padding-bottom: 5px !important;
+        }
+        .item-icon-left i {
+            left: 0;
+            padding-top: 1px !important;
+            padding-bottom: 5px !important;
+            right: auto;
+            color: #D4201F !important;
+            font-size: 20px !important;
+        }
+        .item-radio {
+            .item-content {
+                padding: 0;
+                font-size: 13px;
+            }
+        }
+        .item-radio input ~ .radio-icon {
+            visibility: visible !important;
+        }
+        .item-radio > .radio-icon:before {
+            content: "\f3a6" !important;
+            /*deselected - Ionic class = ion-android-radio-button-off */
+        }
+        .item-radio > input[type=radio]:checked ~ .radio-icon:before {
+            content: "\f3a7" !important;
+            /*selected Ionic class = ion-android-radio-button-on */
+        }
         .preview {
             margin: 15px 0 40px 0;
             img {
                 border: 3px solid $grey;
-                height: 190px;
+                background: url(../../assets/images/placeholder.jpg) no-repeat;
+                min-height: 200px;
                 width: 80%;
+                background-size: cover;
+                background-position: center center;
             }
         }
         .button-submit-report {
