@@ -1,40 +1,52 @@
 .issue_list {
-    .scroll-content {
-        background-color: rgba(255, 255, 255, 0.3);
-        margin-top: 80px;
-        .row {
-            padding: 0;
-            .col-33 {
-                text-align: center;
-                color: $white;
-                padding: 13px;
-                border-right: 4px solid rgba(53, 51, 94, 0.8);
-                border-bottom: 4px solid rgba(53, 51, 94, 0.8);
-                min-height: 120px;
-                text-transform: uppercase;
-                position: relative;
-                height: auto;
-                overflow: scroll;
-                .issue {
-                    position: absolute;
-                    top: 45%;
-                    left: 50%;
-                    width: 90%;
-                    line-height: 13px;
-                    margin: -25% 0 0px -45%;
-                    i {
-                        font-size: 1.7em;
-                    }
-                    p {
-                        font-size: 12px;
-                        margin-top: 4px;
-                        text-transform: capitalize;
-                    }
-                }
-                &.active {
-                    background-color: rgba(255, 255, 255, 0.2);
-                }
-            }
+  .scroll-content {
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 80px;
+
+    .row_item {
+      padding: 0;
+      flex-grow: 1;
+      max-width: 33%;
+      width: 33%;
+      .col_item {
+        text-align: center;
+        color: $white;
+        padding: 13px;
+        border-right: 4px solid rgba(53, 51, 94, 0.8);
+        border-bottom: 4px solid rgba(53, 51, 94, 0.8);
+        min-height: 120px;
+        text-transform: uppercase;
+        position: relative;
+        height: auto;
+        overflow: scroll;
+        .issue {
+          position: absolute;
+          top: 45%;
+          left: 50%;
+          width: 90%;
+          line-height: 13px;
+          margin: -25% 0 0px -45%;
+          i {
+            font-size: 1.7em;
+          }
+          p {
+            font-size: 12px;
+            margin-top: 4px;
+            text-transform: capitalize;
+          }
         }
+        &.active {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+      }
     }
+  }
+}
+
+#list_content {
+  .scroll {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

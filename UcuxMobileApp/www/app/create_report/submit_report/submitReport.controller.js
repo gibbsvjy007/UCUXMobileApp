@@ -1,4 +1,4 @@
-app.controller('SubmitReportCtrl', function($scope, $rootScope, $state, $localStorage, $reportService, toast, $cordovaCamera, $ionicPlatform) {
+app.controller('SubmitReportCtrl', function($scope, $rootScope, $state, $localStorage, $reportService, toast, $cordovaCamera, $utils) {
     var vm = this;
     vm.mediaType = "CAMERA";
     vm.previewImage = false;
@@ -73,7 +73,11 @@ app.controller('SubmitReportCtrl', function($scope, $rootScope, $state, $localSt
         }
         $cordovaCamera.getPicture(options).then(successOk, errorOk);
     };
-
+    var getCreateReportDate = function () {
+      var d = new Date();
+      var dt = $utils.padZero(d.getDate()) + "/" + $utils.padZero(d.getMonth()+1) + "/" + d.getFullYear() + " " + $utils.padZero(d.getHours()) + ":" + $utils.padZero(d.getMinutes());
+      return dt;
+    };
     vm.createReport = function(event) {
         event.preventDefault();
         if (vm.previewImage) {
@@ -89,7 +93,8 @@ app.controller('SubmitReportCtrl', function($scope, $rootScope, $state, $localSt
                 "Category3": finalReportObj.subCategoryId,
                 "Condition": finalReportObj.condition,
                 "Remarks": finalReportObj.remarks,
-                "FileBase64String": vm.base64File
+                "FileBase64String": vm.base64File,
+                "IssueDatetime": getCreateReportDate()//dd/MM/yyyy hh:mm
             };
             $reportService.createReport(reporttObj).then(function(response) {
                 console.log(response.data);

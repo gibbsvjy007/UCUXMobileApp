@@ -12622,9 +12622,12 @@ select {
 .issue_list .scroll-content {
   background-color: rgba(255, 255, 255, 0.3);
   margin-top: 80px; }
-  .issue_list .scroll-content .row {
-    padding: 0; }
-    .issue_list .scroll-content .row .col-33 {
+  .issue_list .scroll-content .row_item {
+    padding: 0;
+    flex-grow: 1;
+    max-width: 33%;
+    width: 33%; }
+    .issue_list .scroll-content .row_item .col_item {
       text-align: center;
       color: #ffffff;
       padding: 13px;
@@ -12635,21 +12638,26 @@ select {
       position: relative;
       height: auto;
       overflow: scroll; }
-      .issue_list .scroll-content .row .col-33 .issue {
+      .issue_list .scroll-content .row_item .col_item .issue {
         position: absolute;
         top: 45%;
         left: 50%;
         width: 90%;
         line-height: 13px;
         margin: -25% 0 0px -45%; }
-        .issue_list .scroll-content .row .col-33 .issue i {
+        .issue_list .scroll-content .row_item .col_item .issue i {
           font-size: 1.7em; }
-        .issue_list .scroll-content .row .col-33 .issue p {
+        .issue_list .scroll-content .row_item .col_item .issue p {
           font-size: 12px;
           margin-top: 4px;
           text-transform: capitalize; }
-      .issue_list .scroll-content .row .col-33.active {
+      .issue_list .scroll-content .row_item .col_item.active {
         background-color: rgba(255, 255, 255, 0.2); }
+
+#list_content .scroll {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
 
 .subissue .scroll-content {
   top: 80px;

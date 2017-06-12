@@ -5,7 +5,7 @@ app.controller('activationCtrl', function ($scope, $timeout, $stateParams, CONFI
   vm.otp = '';
   vm.doVerify = function () {
     var queryParams = {
-      number: CONFIG.COUNTRY_CODE + vm.phoneNumber
+      number: vm.phoneNumber
     };
     toast.show('OTP Sent Succuessfully.');
     $authService.verifyNumber(queryParams).then(function (response) {
@@ -36,11 +36,10 @@ app.controller('activationCtrl', function ($scope, $timeout, $stateParams, CONFI
     }
   };
   vm.registerDevice = function () {
-
     var request = {
       "UserId": $utils.getUserId(),
       "DeviceTypeId": $utils.getDeviceType(), //1: Android, 2: IOS
-      "DeviceId": $utils.getDeviceUUID()
+      "DeviceId": localStorage.getItem('DeviceToken')
     };
     $authService.updateDeviceToken(request).then(function () {
       console.log('Device Token updated Succuessfully');

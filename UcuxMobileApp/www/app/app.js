@@ -18,7 +18,7 @@ var app = angular.module('ucux', modules).config(function ($ionicCloudProvider) 
       }
     }
   });
-}).run(function ($ionicPlatform, $http, $ionicPopup, $utils, $rootScope, $ionicPush, $ionicHistory, $state, $cordovaGoogleAnalytics, CONFIG, $localStorage) {
+}).run(function ($ionicPlatform, $http, $ionicPopup, $utils, $rootScope, toast, $authService, $ionicPush, $ionicHistory, $state, $cordovaGoogleAnalytics, CONFIG, $localStorage) {
   $ionicPlatform.ready(function () {
     $rootScope.currentYear = new Date().getFullYear();
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
@@ -35,7 +35,17 @@ var app = angular.module('ucux', modules).config(function ($ionicCloudProvider) 
       return $ionicPush.saveToken(t);
     }).then(function (t) {
       console.log('Token saved:', t.token)
-      alert(t.token);
+      //toast.show("Device Token: " + t.token);
+      localStorage.setItem('DeviceToken', t.token);
+      var request = {
+        "UserId": $utils.getUserId(),
+        "DeviceTypeId": $utils.getDeviceType(), //1: Android, 2: IOS
+        "DeviceId": t.token
+      };
+      $authService.updateDeviceToken(request).then(function () {
+        console.log('Device Token updated Succuessfully');
+        toast.show("Device Token Updated Successfully..");
+      });
     });
   });
   //Set global variables
@@ -56,7 +66,7 @@ var app = angular.module('ucux', modules).config(function ($ionicCloudProvider) 
           $state.go('login');
         }
       }
-    }else{
+    } else {
       //$state.go('activation');
     }
     $('.back-text').html("");

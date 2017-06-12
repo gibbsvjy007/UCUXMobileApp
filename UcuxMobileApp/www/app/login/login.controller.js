@@ -15,7 +15,7 @@ app.controller('loginCtrl', function($scope, $timeout, $stateParams, $ionicPopup
     });
     vm.doLogin = function() {
         var request = {
-            "ContactNo": CONFIG.COUNTRY_CODE + vm.username,
+            "ContactNo": vm.username,
             "Password": vm.password
         };
 

@@ -61,6 +61,10 @@ app.factory('$utils', function($state, $ionicLoading, $localStorage, $cordovaToa
     utils.showError = function() {
         $cordovaToast.show($message.error, 'long', 'bottom');
     };
+    utils.padZero = function (n) {
+      n = parseInt(n);
+      return (n < 10 ? '0' : '') + n;
+    };
     utils.confirmDialog = function(dialog) {
         return $ionicPopup.confirm({
             title: dialog.title,
