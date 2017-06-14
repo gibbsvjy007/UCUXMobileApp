@@ -8,37 +8,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:699382126531:android:807ab045f1309f37",
-        "android_client_info": {
-          "package_name": "com.ionicframework.ucuxmobileapp948891"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "699382126531-olbqef0os4lstom959ocbiq61cbiqhrs.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyCGNmYFBB7EeVQtvzLywEyhzC5pDUkVulc"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:699382126531:android:47a0d4e70b02447c",
         "android_client_info": {
           "package_name": "com.ionicframework.ucuxmobileapp"
