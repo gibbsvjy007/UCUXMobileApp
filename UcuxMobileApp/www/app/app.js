@@ -44,7 +44,7 @@ var app = angular.module('ucux', modules).config(function ($ionicCloudProvider) 
       };
       $authService.updateDeviceToken(request).then(function () {
         console.log('Device Token updated Succuessfully');
-        toast.show("Device Token Updated Successfully..");
+        //toast.show("Device Token Updated Successfully..");
       });
     });
   });
@@ -76,8 +76,8 @@ var app = angular.module('ucux', modules).config(function ($ionicCloudProvider) 
   $rootScope.back = function () {
     $ionicHistory.goBack();
   };
-  $ionicPlatform.registerBackButtonAction(function (event) {
-    if ($state.current.name == "home") {
+  $ionicPlatform.registerBackButtonAction(function () {
+    if ($state.current.name === "app.create_report" || $state.current.name === "login" || $state.current.name === "activation") {
       var confirmPopup = $ionicPopup.confirm({
         title: 'Exit',
         template: 'Are you sure you want to exit?'

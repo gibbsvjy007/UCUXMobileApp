@@ -23,16 +23,16 @@
                             <br> Received By SMS to your Phone</p>
                         <div class="digits_section">
                             <div class="item item-input">
-                                <input type="text" ng-model="vm.otp1" placeholder="0">
+                                <input type="text" ng-model="vm.otp1" minlength="1" maxlength="1" placeholder="0">
                             </div>
                             <div class="item item-input">
-                                <input type="text" ng-model="vm.otp2" placeholder="0">
+                                <input type="text" ng-model="vm.otp2" minlength="1" maxlength="1" placeholder="0">
                             </div>
                             <div class="item item-input">
-                                <input type="text" ng-model="vm.otp3" placeholder="0">
+                                <input type="text" ng-model="vm.otp3" minlength="1" maxlength="1" placeholder="0">
                             </div>
                             <div class="item item-input">
-                                <input type="text" ng-model="vm.otp4" placeholder="0">
+                                <input type="text" ng-model="vm.otp4" minlength="1" maxlength="1" placeholder="0">
                             </div>
                         </div>
                         <button class="button button-block" ng-click="vm.completeVerification()">

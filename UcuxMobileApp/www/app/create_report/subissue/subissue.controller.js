@@ -33,7 +33,7 @@ app.controller('SubIssueListCtrl', function ($scope, IssueList, $state, $rootSco
       if (response.data && response.data.length > 0) {
         vm.subCategoryList = response.data;
       } else {
-        toast.show("No Category Found.");
+        //toast.show("No Category Found.");
       }
 
       // $state.go('app.subIssue');
@@ -64,7 +64,7 @@ app.controller('SubIssueListCtrl', function ($scope, IssueList, $state, $rootSco
           vm.subSubCategoryList = response.data;
           vm.subCategory = true;
         } else {
-          toast.show("No Category Found.");
+          //toast.show("No Category Found.");
           vm.subCategory = false;
         }
 
@@ -88,7 +88,7 @@ app.controller('SubIssueListCtrl', function ($scope, IssueList, $state, $rootSco
       if (response.data && response.data.length > 0) {
         vm.zoneList = response.data;
       } else {
-        toast.show("No Category Found.");
+        //toast.show("No Category Found.");
       }
 
       // $state.go('app.subIssue');
