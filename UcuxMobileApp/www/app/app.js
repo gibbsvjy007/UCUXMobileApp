@@ -42,6 +42,7 @@ var app = angular.module('ucux', modules).config(function ($ionicCloudProvider) 
         "DeviceTypeId": $utils.getDeviceType(), //1: Android, 2: IOS
         "DeviceId": t.token
       };
+      alert(t.token);
       $authService.updateDeviceToken(request).then(function () {
         console.log('Device Token updated Succuessfully');
         //toast.show("Device Token Updated Successfully..");

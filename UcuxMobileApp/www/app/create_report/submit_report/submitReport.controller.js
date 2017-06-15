@@ -24,12 +24,14 @@ app.controller('SubmitReportCtrl', function ($scope, $rootScope, $state, $localS
         } else {
 
         }
+        console.log(imagePath);
         var onFSError = function (err) {
           console.log(err);
         };
         var gotFileEntry = function (fileEntry) {
           vm.previewImage = "";
           $('.previewImage').attr('src', fileEntry.nativeURL);
+               console.log(fileEntry.nativeURL);
           fileEntry.file(function (file) {
             var reader = new FileReader();
             // Create a function to process the file once it's read
@@ -50,7 +52,7 @@ app.controller('SubmitReportCtrl', function ($scope, $rootScope, $state, $localS
           }, onFSError);
         };
 
-        window.resolveLocalFileSystemURI(imagePath, gotFileEntry, onFSError)
+        window.resolveLocalFileSystemURL(imagePath, gotFileEntry, onFSError)
       }
 
     };
