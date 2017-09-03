@@ -16,35 +16,16 @@
              onchange="angular.element(this).scope().onFileSelect(this.files)" accept="image/*">
       <progress ng-show="vm.progressval > 0" max="100" id="progressbar" value="{{ vm.progressval }}"> </progress>
       <div id="progressbarlabel" ng-show="vm.progressval > 0">{{ vm.progressval }} %</div>
-      <div class="row">
-        <!--<div class="col">-->
-        <!--<label class="item item-icon-left item-radio" style="border: none">-->
-        <!--<input type="radio" name="group" value="CAMERA" ng-model="vm.mediaType">-->
-        <!--<div class="item-content" style="margin-left:0px">-->
-        <!--Camera-->
-        <!--</div>-->
-        <!--<i class="radio-icon ion-checkmark"></i>-->
-        <!--</label>-->
-        <!--</div>-->
-        <!--<div class="col">-->
-        <!--<label class="item item-icon-left item-radio" style="border: none">-->
-        <!--<input type="radio" name="group" value="GALLERY" ng-model="vm.mediaType">-->
-        <!--<div class="item-content">-->
-        <!--Gallery-->
-        <!--</div>-->
-        <!--<i class="radio-icon ion-checkmark"></i>-->
-        <!--</label>-->
-        <!--</div>-->
-        <button class="button button-block button-outline button-positive" ng-click="uploadDocument()" > UPLOAD IMAGE</button>
-      </div>
+
+        <!--<button class="button button-block button-outline button-positive" ng-click="uploadDocument()" > UPLOAD IMAGE</button>-->
+
     </form>
     <div class="preview" align="center">
-      <img class="previewImage" height="300"/>
+      <img class="previewImage" height=200"/>
     </div>
-    <div class="clearfix"></div>
     <div align="center">
       <p>Please upload image before creating report</p>
-      <button class="button button-submit-report" ng-click="vm.createReport($event)"><strong>Submit Report</strong>
+      <button class="button button-submit-report" ng-click="uploadDocument()"><strong>Submit Report</strong>
       </button>
     </div>
   </ion-content>

@@ -134,6 +134,7 @@ app.controller('SubmitReportCtrl', function ($scope, $rootScope, $state, $localS
       try {
         console.log(xhr.responseText);
         vm.previewImage = JSON.parse(xhr.responseText);
+        vm.createReport(JSON.parse(xhr.responseText));
         vm.progressval = 0;
       } catch (e) {
         console.log("Wrong return value from FileGateServlet (cloud); xhr.responseText: " + xhr.responseText + "; exception: " + e);
@@ -142,9 +143,9 @@ app.controller('SubmitReportCtrl', function ($scope, $rootScope, $state, $localS
     };
     xhr.send(formData);
   };
-  vm.createReport = function (event) {
+  vm.createReport = function (imagePath) {
     event.preventDefault();
-    if (vm.previewImage) {
+    if (imagePath) {
       var finalReportObj = $localStorage.get('FinalReportObj');
       var reporttObj = {
         "UserId": $rootScope.currentUser.UserId,
@@ -157,7 +158,7 @@ app.controller('SubmitReportCtrl', function ($scope, $rootScope, $state, $localS
         "Category3": finalReportObj.subCategoryId,
         "Condition": finalReportObj.condition,
         "Remarks": finalReportObj.remarks,
-        "ImageFileName": vm.previewImage,
+        "ImageFileName": imagePath,
         "IssueDatetime": getCreateReportDate()//dd/MM/yyyy hh:mm
       };
       $reportService.createReport(reporttObj).then(function (response) {
@@ -171,7 +172,5 @@ app.controller('SubmitReportCtrl', function ($scope, $rootScope, $state, $localS
     } else {
       toast.show("Please attach an Image");
     }
-
   };
-
 });
