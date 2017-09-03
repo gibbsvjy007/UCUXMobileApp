@@ -26,7 +26,7 @@ app.controller('loginCtrl', function($scope, $timeout, $stateParams, $ionicPopup
                 //success
                 $localStorage.set('currentUser', response.data); //store username
                 $state.go('app.create_report');
-                toast.show("Login successfully..");
+                toast.show("Loggedin successfully..");
             }, function(error) {
                 //error
                 toast.show("Something went wrong. Please try again.");

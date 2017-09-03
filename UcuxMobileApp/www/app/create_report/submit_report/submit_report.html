@@ -1,40 +1,51 @@
 <ion-view class="submit_report" view-title="{{title}}" align-title="center" ng-init="vm.init()">
-    <!-- <div id="search-bar">
-        <div class="item item-input-inset">
-            <label class="item-input-wrapper" id="search-input">
-                 <i class="icon my-search placeholder-icon"></i>
-                <input type="text" placeholder="Search" ng-model="query" ng-change="search()">
-            </label>
-        </div>
-    </div> -->
-    <ion-content padding="true" scroll="true">
-        <p class="attach_title" ng-click="vm.attachImage()">TAKE... / ATTACH IMAGE <i class="fa fa-paperclip pull-right"></i></p>
-        <div class="row">
-            <div class="col">
-                <label class="item item-icon-left item-radio" style="border: none">
-                    <input type="radio" name="group" value="CAMERA" ng-model="vm.mediaType">
-                    <div class="item-content" style="margin-left:0px">
-                        Camera
-                    </div>
-                    <i class="radio-icon ion-checkmark"></i>
-                </label>
-            </div>
-            <div class="col">
-                <label class="item item-icon-left item-radio" style="border: none">
-                    <input type="radio" name="group" value="GALLERY" ng-model="vm.mediaType">
-                    <div class="item-content">
-                        Gallery
-                    </div>
-                    <i class="radio-icon ion-checkmark"></i>
-                </label>
-            </div>
-        </div>
-        <div class="preview" align="center">
-            <img class="previewImage" />
-        </div>
-        <div class="clearfix"></div>
-        <div align="center">
-            <button class="button button-submit-report" ng-click="vm.createReport($event)"><strong>Submit Report</strong></button>
-        </div>
-    </ion-content>
+  <!-- <div id="search-bar">
+      <div class="item item-input-inset">
+          <label class="item-input-wrapper" id="search-input">
+               <i class="icon my-search placeholder-icon"></i>
+              <input type="text" placeholder="Search" ng-model="query" ng-change="search()">
+          </label>
+      </div>
+  </div> -->
+  <ion-content padding="true" scroll="true">
+    <form name="docForm" class="upload_form" novalidate>
+      <p class="attach_title" ng-click="openGallery($event)">
+        TAKE... / ATTACH IMAGE <i class="fa fa-paperclip pull-right"></i>
+      </p>
+      <input type="file" name="docImg" style="display: none;" id="attach_image"
+             onchange="angular.element(this).scope().onFileSelect(this.files)" accept="image/*">
+      <progress ng-show="vm.progressval > 0" max="100" id="progressbar" value="{{ vm.progressval }}"> </progress>
+      <div id="progressbarlabel" ng-show="vm.progressval > 0">{{ vm.progressval }} %</div>
+      <div class="row">
+        <!--<div class="col">-->
+        <!--<label class="item item-icon-left item-radio" style="border: none">-->
+        <!--<input type="radio" name="group" value="CAMERA" ng-model="vm.mediaType">-->
+        <!--<div class="item-content" style="margin-left:0px">-->
+        <!--Camera-->
+        <!--</div>-->
+        <!--<i class="radio-icon ion-checkmark"></i>-->
+        <!--</label>-->
+        <!--</div>-->
+        <!--<div class="col">-->
+        <!--<label class="item item-icon-left item-radio" style="border: none">-->
+        <!--<input type="radio" name="group" value="GALLERY" ng-model="vm.mediaType">-->
+        <!--<div class="item-content">-->
+        <!--Gallery-->
+        <!--</div>-->
+        <!--<i class="radio-icon ion-checkmark"></i>-->
+        <!--</label>-->
+        <!--</div>-->
+        <button class="button button-block button-outline button-positive" ng-click="uploadDocument()" > UPLOAD IMAGE</button>
+      </div>
+    </form>
+    <div class="preview" align="center">
+      <img class="previewImage" height="300"/>
+    </div>
+    <div class="clearfix"></div>
+    <div align="center">
+      <p>Please upload image before creating report</p>
+      <button class="button button-submit-report" ng-click="vm.createReport($event)"><strong>Submit Report</strong>
+      </button>
+    </div>
+  </ion-content>
 </ion-view>
