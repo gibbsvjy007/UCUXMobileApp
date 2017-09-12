@@ -79,7 +79,7 @@ var app = angular.module('ucux', modules).config(function ($ionicCloudProvider) 
     $ionicHistory.goBack();
   };
   $ionicPlatform.registerBackButtonAction(function () {
-    if ($state.current.name === "app.create_report" || $state.current.name === "login" || $state.current.name === "activation") {
+    if ($state.current.name === "app.create_report" || $state.current.name === "app.reports" || $state.current.name === "login" || $state.current.name === "activation") {
       var confirmPopup = $ionicPopup.confirm({
         title: 'Exit',
         template: 'Are you sure you want to exit?'

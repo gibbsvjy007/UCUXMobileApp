@@ -1,4 +1,4 @@
-app.controller('SubmitReportCtrl', function ($scope, $rootScope, $state, $localStorage, $reportService, toast, $cordovaCamera, $utils) {
+app.controller('SubmitReportCtrl', function ($scope, $rootScope, $timeout, $cordovaFileTransfer, $ionicPopup, $state, $cordovaFile, $localStorage, $reportService, toast, $cordovaCamera, $utils) {
   var vm = this;
   vm.mediaType = "CAMERA";
   vm.previewImage = null;
@@ -6,55 +6,76 @@ app.controller('SubmitReportCtrl', function ($scope, $rootScope, $state, $localS
     var currentIssue = $localStorage.get('currentIssue');
     $scope.title = currentIssue.Name;
   };
+
+  $scope.showAlert = function (title, msg) {
+    var alertPopup = $ionicPopup.alert({
+      title: title,
+      template: msg
+    });
+  };
   vm.attachImage = function () {
 
     var successOk = function (imagePath) {
-      if (vm.mediaType === "CAMERA") {
-        vm.previewImage = true;
-        vm.base64File = imagePath;
-        $('.previewImage').attr('src', "data:image/jpeg;base64," + imagePath);
-        // vm.previewImage = "data:image/jpeg;base64," + imagePath;
+      // if (vm.mediaType === "CAMERA") {
+      //   vm.previewImage = true;
+      //   vm.base64File = imagePath;
+      //   $('.previewImage').attr('src', "data:image/jpeg;base64," + imagePath);
+      //   // vm.previewImage = "data:image/jpeg;base64," + imagePath;
+      //
+      // } else {
+      //   if (ionic.Platform.isAndroid()) {
+      //     if (imagePath.substring(0, 21) === "content://com.android") {
+      //       photo_split = imagePath.split("%3A");
+      //       imagePath = "content://media/external/images/media/" + photo_split[1];
+      //     }
+      //   } else {
+      //
+      //   }
+      //   console.log(imagePath);
+      //   var onFSError = function (err) {
+      //     console.log(err);
+      //   };
+      //   var gotFileEntry = function (fileEntry) {
+      //     vm.previewImage = "";
+      //     $('.previewImage').attr('src', fileEntry.nativeURL);
+      //     console.log(fileEntry.nativeURL);
+      //     fileEntry.file(function (file) {
+      //       var reader = new FileReader();
+      //       // Create a function to process the file once it's read
+      //       reader.onloadend = function (event) {
+      //         data = '';
+      //         if (event.target.result.toLowerCase().indexOf('jpeg') >= 1) {
+      //           data = event.target.result.substring(23, event.target.result.length);
+      //         } else {
+      //           data = event.target.result.substring(22, event.target.result.length);
+      //         }
+      //         vm.base64File = data;
+      //         setTimeout(function () {
+      //           vm.previewImage = true;
+      //           //$('.previewImage').attr('src', "data:image/jpeg;base64," + data);
+      //         }, 1000);
+      //       }
+      //       reader.readAsDataURL(file);
+      //     }, onFSError);
+      //   };
+      //
+      //   window.resolveLocalFileSystemURL(imagePath, gotFileEntry, onFSError)
+      // }
+      var currentName = imagePath.replace(/^.*[\\\/]/, '');
 
-      } else {
-        if (ionic.Platform.isAndroid()) {
-          if (imagePath.substring(0, 21) === "content://com.android") {
-            photo_split = imagePath.split("%3A");
-            imagePath = "content://media/external/images/media/" + photo_split[1];
-          }
-        } else {
+      //Create a new name for the photo
+      var d = new Date(),
+        n = d.getTime(),
+        newFileName = n + ".jpg";
+      var namePath = imagePath.substr(0, imagePath.lastIndexOf('/') + 1);
 
-        }
-        console.log(imagePath);
-        var onFSError = function (err) {
-          console.log(err);
-        };
-        var gotFileEntry = function (fileEntry) {
-          vm.previewImage = "";
-          $('.previewImage').attr('src', fileEntry.nativeURL);
-          console.log(fileEntry.nativeURL);
-          fileEntry.file(function (file) {
-            var reader = new FileReader();
-            // Create a function to process the file once it's read
-            reader.onloadend = function (event) {
-              data = '';
-              if (event.target.result.toLowerCase().indexOf('jpeg') >= 1) {
-                data = event.target.result.substring(23, event.target.result.length);
-              } else {
-                data = event.target.result.substring(22, event.target.result.length);
-              }
-              vm.base64File = data;
-              setTimeout(function () {
-                vm.previewImage = true;
-                //$('.previewImage').attr('src', "data:image/jpeg;base64," + data);
-              }, 1000);
-            }
-            reader.readAsDataURL(file);
-          }, onFSError);
-        };
-
-        window.resolveLocalFileSystemURL(imagePath, gotFileEntry, onFSError)
-      }
-
+      // Move the file to permanent storage
+      $cordovaFile.moveFile(namePath, currentName, cordova.file.dataDirectory, newFileName).then(function (success) {
+        $scope.image = newFileName;
+        $('.previewImage').attr('src', $scope.pathForImage($scope.image));
+      }, function (error) {
+        $scope.showAlert('Error', error.exception);
+      });
     };
     var errorOk = function () {
       toast.show("Can't open Camera or Gallery.");
@@ -66,7 +87,7 @@ app.controller('SubmitReportCtrl', function ($scope, $rootScope, $state, $localS
       options.destinationType = Camera.DestinationType.FILE_URL;
       options.sourceType = Camera.PictureSourceType.PHOTOLIBRARY;
     } else {
-      options.destinationType = Camera.DestinationType.DATA_URL;
+      options.destinationType = Camera.DestinationType.FILE_URI;
       options.sourceType = Camera.PictureSourceType.CAMERA;
       // options.allowEdit = true;
       options.quality = 99;
@@ -79,11 +100,24 @@ app.controller('SubmitReportCtrl', function ($scope, $rootScope, $state, $localS
     }
     $cordovaCamera.getPicture(options).then(successOk, errorOk);
   };
+
+  // Returns the local path inside the app for an image
+  $scope.pathForImage = function (image) {
+    if (image === null) {
+      return '';
+    } else {
+      return cordova.file.dataDirectory + image;
+    }
+  };
   $scope.openGallery = function (e) {
     e.preventDefault();
     $scope.selectedImage = [];
     $('.previewImage').removeAttr('src');
-    $('#attach_image').click();
+    if (vm.mediaType === "CAMERA") {
+      vm.attachImage();
+    } else {
+      $('#attach_image').click();
+    }
   };
   var getCreateReportDate = function () {
     var d = new Date();
@@ -110,15 +144,46 @@ app.controller('SubmitReportCtrl', function ($scope, $rootScope, $state, $localS
   vm.progressval = 0;
   $scope.uploadDocument = function () {
     var formData = new FormData();
-    formData.append("file", $scope.selectedImage[0]);
     var xhr = new XMLHttpRequest();
     var filegateUrl = $rootScope.baseURL + 'uploadfiles';
     xhr.open("POST", filegateUrl, true);
+
+    if (vm.mediaType === "CAMERA") {
+      // File for Upload
+      var targetPath = $scope.pathForImage($scope.image);
+      console.log($scope.image);
+      console.log(targetPath);
+      var filename = $scope.image;
+      var options = {
+        fileKey: "file",
+        fileName: filename,
+        chunkedMode: false,
+        mimeType: "multipart/form-data",
+        params: {'fileName': filename}
+      };
+
+      $cordovaFileTransfer.upload(filegateUrl, targetPath, options).then(function (result) {
+        //$scope.showAlert('Success', 'Image upload finished.');
+        if (result.responseCode === 200) {
+          vm.progressval = 10;
+          $timeout(function () {
+            vm.progressval = 100;
+            vm.previewImage = JSON.parse(result.response);
+            vm.createReport(JSON.parse(result.response));
+            vm.progressval = 0;
+          }, 2000);
+        }
+      });
+    } else {
+      formData.append("file", $scope.selectedImage[0]);
+      xhr.send(formData);
+    }
+
     // Listen to the upload progress.
-    xhr.upload.onprogress = function(e) {
+    xhr.upload.onprogress = function (e) {
       if (e.lengthComputable) {
         $scope.$apply(function () {
-          vm.progressval = (e.loaded / e.total) * 100;
+          vm.progressval = parseInt((e.loaded / e.total)) * 100;
         });
         console.log(e);
         console.log(vm.progressval);
@@ -141,10 +206,9 @@ app.controller('SubmitReportCtrl', function ($scope, $rootScope, $state, $localS
       }
 
     };
-    xhr.send(formData);
+
   };
   vm.createReport = function (imagePath) {
-    event.preventDefault();
     if (imagePath) {
       var finalReportObj = $localStorage.get('FinalReportObj');
       var reporttObj = {

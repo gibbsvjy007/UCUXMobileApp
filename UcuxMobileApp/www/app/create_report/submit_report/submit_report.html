@@ -14,10 +14,29 @@
       </p>
       <input type="file" name="docImg" style="display: none;" id="attach_image"
              onchange="angular.element(this).scope().onFileSelect(this.files)" accept="image/*">
-      <progress ng-show="vm.progressval > 0" max="100" id="progressbar" value="{{ vm.progressval }}"> </progress>
+      <progress ng-show="vm.progressval > 0" max="100" id="progressbar" value="{{ vm.progressval }}"></progress>
       <div id="progressbarlabel" ng-show="vm.progressval > 0">{{ vm.progressval }} %</div>
-
-        <!--<button class="button button-block button-outline button-positive" ng-click="uploadDocument()" > UPLOAD IMAGE</button>-->
+      <div class="row">
+        <div class="col">
+          <label class="item item-icon-left item-radio" style="border: none">
+            <input type="radio" name="group" value="CAMERA" ng-model="vm.mediaType">
+            <div class="item-content" style="margin-left:0px">
+              Camera
+            </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </label>
+        </div>
+        <div class="col">
+          <label class="item item-icon-left item-radio" style="border: none">
+            <input type="radio" name="group" value="GALLERY" ng-model="vm.mediaType">
+            <div class="item-content">
+              Gallery
+            </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </label>
+        </div>
+      </div>
+      <!--<button class="button button-block button-outline button-positive" ng-click="uploadDocument()" > UPLOAD IMAGE</button>-->
 
     </form>
     <div class="preview" align="center">
