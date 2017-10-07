@@ -3,17 +3,16 @@
 Application Name: UCUX
 Company: UCUX
 --------------------------------------------------
+* Ionic/Angular Javascript Frameworks 
+* Cordova CLI 7.0.1 
+* Android Platform 6.2.3 22 
+* Node version 6.9.2  
 
-Ionic/Angular Javascript Frameworks 
-Cordova CLI 7.0.1 
-Android Platform 6.2.3 22
-Node version 6.9.2
 
-
-Run Application
+Description
 -----------------------------------------
-Install node and cordova. Download android SDK from the official website and setup its environment in the system
-Useful links are copied at the end
+Install node and cordova. Download android SDK from the official website and setup its environment in the system. All the
+useful links are copied at the end
 
 
 Run Application
