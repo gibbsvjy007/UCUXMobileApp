@@ -52,8 +52,8 @@ Referencs: https://github.com/phonegap-build/PushPlugin
 
 Useful links
 ----------------------------------------------
-http://ionicframework.com/docs/v1/
-https://developer.android.com/studio/index.html
-https://cordova.apache.org/
-https://angularjs.org/
+1. http://ionicframework.com/docs/v1/
+2. https://developer.android.com/studio/index.html
+3. https://cordova.apache.org/
+4. https://angularjs.org/
 
