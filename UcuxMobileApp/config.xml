@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ionicframework.ucuxmobileapp948891" version="0.0.2" xmlns="http://www.w3.org/ns/widgets">
+<widget android-versionCode="004" id="com.ionicframework.ucuxmobileapp" version="0.0.4" xmlns="http://www.w3.org/ns/widgets">
     <name>UCUX</name>
     <description>
     UCUX Security Training Application can be used by the workers in a particular workplace to report security incidents

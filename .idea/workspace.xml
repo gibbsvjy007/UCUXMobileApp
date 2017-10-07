@@ -2,28 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e1a9d45-cc02-444b-a2ab-0730cbdaba96" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-land-hdpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-land-ldpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-land-mdpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-land-xhdpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-port-hdpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-port-ldpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-port-mdpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-port-xhdpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-port-xxhdpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-port-xxxhdpi/screen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-hdpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-ldpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-mdpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xhdpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxhdpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/mipmap-xxxhdpi/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release-signing.properties" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/UcuxMobileApp/package-lock.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/UCUX.iml" afterPath="$PROJECT_DIR$/.idea/UCUX.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-land-hdpi-screen.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-land-hdpi-screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-land-ldpi-screen.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-land-ldpi-screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-land-mdpi-screen.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-land-mdpi-screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-land-xhdpi-screen.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-land-xhdpi-screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-land-xxhdpi-screen.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-land-xxhdpi-screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-land-xxxhdpi-screen.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-land-xxxhdpi-screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-port-hdpi-screen.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-port-hdpi-screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-port-ldpi-screen.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-port-ldpi-screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-port-mdpi-screen.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-port-mdpi-screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-port-xhdpi-screen.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-port-xhdpi-screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-port-xxhdpi-screen.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-port-xxhdpi-screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-port-xxxhdpi-screen.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/android/splash/drawable-port-xxxhdpi-screen.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-568h@2x~iphone.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-568h@2x~iphone.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-667h.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-667h.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-736h.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-736h.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-Landscape-736h.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-Landscape-736h.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-Landscape@2x~ipad.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-Landscape@2x~ipad.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-Landscape@~ipadpro.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-Landscape@~ipadpro.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-Landscape~ipad.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-Landscape~ipad.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-Portrait@2x~ipad.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-Portrait@2x~ipad.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-Portrait@~ipadpro.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-Portrait@~ipadpro.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-Portrait~ipad.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default-Portrait~ipad.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default@2x~iphone.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default@2x~iphone.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default~iphone.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/ios/splash/Default~iphone.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/resources/splash.png" afterPath="$PROJECT_DIR$/UcuxMobileApp/resources/splash.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/config.xml" afterPath="$PROJECT_DIR$/UcuxMobileApp/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UcuxMobileApp/package.json" afterPath="$PROJECT_DIR$/UcuxMobileApp/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,7 +45,7 @@
       <file leaf-file-name="submitReport.controller.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UcuxMobileApp/www/app/create_report/submit_report/submitReport.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="3108">
               <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
               <folding />
             </state>
@@ -75,30 +80,28 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UcuxMobileApp/www/app/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
+            <state relative-caret-position="819">
               <caret line="39" column="48" lean-forward="false" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/UcuxMobileApp/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="91" column="34" lean-forward="false" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
-              <folding>
-                <marker date="1505314531743" expanded="true" signature="7036:7053" ph="..." />
-              </folding>
+            <state relative-caret-position="21">
+              <caret line="1" column="86" lean-forward="false" selection-start-line="1" selection-start-column="86" selection-end-line="1" selection-end-column="86" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UcuxMobileApp/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+            <state relative-caret-position="861">
+              <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -119,16 +122,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
               <caret line="22" column="36" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="subissue.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UcuxMobileApp/www/app/create_report/subissue/subissue.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1890">
-              <caret line="90" column="10" lean-forward="false" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -184,8 +177,8 @@
         <option value="$PROJECT_DIR$/UcuxMobileApp/www/app/create_report/submit_report/submit_report.html" />
         <option value="$PROJECT_DIR$/UcuxMobileApp/www/app/app.js" />
         <option value="$PROJECT_DIR$/UcuxMobileApp/www/app/create_report/submit_report/submitReport.controller.js" />
-        <option value="$PROJECT_DIR$/UcuxMobileApp/config.xml" />
         <option value="$PROJECT_DIR$/UcuxMobileApp/package.json" />
+        <option value="$PROJECT_DIR$/UcuxMobileApp/config.xml" />
       </list>
     </option>
   </component>
@@ -213,7 +206,7 @@
     <handled-path value="$PROJECT_DIR$/UcuxMobileApp/plugins/cordova-plugin-statusbar/node_modules" />
     <handled-path value="$PROJECT_DIR$/UcuxMobileApp/plugins/phonegap-plugin-push/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
@@ -387,23 +380,26 @@
       <workItem from="1504453112286" duration="3032000" />
       <workItem from="1505166460617" duration="7029000" />
       <workItem from="1505310374156" duration="1194000" />
-      <workItem from="1505313612730" duration="926000" />
+      <workItem from="1505313612730" duration="2158000" />
+      <workItem from="1505393008425" duration="33000" />
+      <workItem from="1505892189479" duration="1762000" />
+      <workItem from="1505946511934" duration="1408000" />
+      <workItem from="1506460646595" duration="610000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65712000" />
+    <option name="totallyTimeSpent" value="70757000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="0" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23902696" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39227167" sideWeight="0.50185084" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43559718" sideWeight="0.49814913" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49765807" sideWeight="0.49814913" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -445,13 +441,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/UcuxMobileApp/www/app/login/login.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="73" lean-forward="false" selection-start-line="0" selection-start-column="73" selection-end-line="0" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UcuxMobileApp/www/app/login/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -640,7 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1890">
           <caret line="90" column="10" lean-forward="false" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -763,7 +751,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/UcuxMobileApp/www/app/create_report/submit_report/submitReport.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="3108">
           <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
           <folding />
         </state>
@@ -784,26 +772,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/UcuxMobileApp/www/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
+        <state relative-caret-position="819">
           <caret line="39" column="48" lean-forward="false" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UcuxMobileApp/config.xml">
+    <entry file="file://$PROJECT_DIR$/UcuxMobileApp/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="91" column="34" lean-forward="false" selection-start-line="91" selection-start-column="34" selection-end-line="91" selection-end-column="34" />
-          <folding>
-            <marker date="1505314531743" expanded="true" signature="7036:7053" ph="..." />
-          </folding>
+        <state relative-caret-position="861">
+          <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UcuxMobileApp/package.json">
+    <entry file="file://$PROJECT_DIR$/UcuxMobileApp/hooks/after_prepare/010_add_platform_class.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UcuxMobileApp/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="86" lean-forward="false" selection-start-line="1" selection-start-column="86" selection-end-line="1" selection-end-column="86" />
           <folding />
         </state>
       </provider>
